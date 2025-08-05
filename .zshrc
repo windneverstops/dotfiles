@@ -20,7 +20,7 @@ alias volume='nohup pavucontrol >/dev/null 2>&1 &'
 export BROWSER=firefox
 alias dolphin='nohup dolphin >/dev/null 2>&1 &'
 alias podman='nohup podman >/dev/null 2>&1 &'
-
+alias timeshift='sudo -E timeshift-gtk'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
