@@ -1,8 +1,12 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+fastfetch
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH=$HOME/.npm-global/bin:$PATH
+export AWS_ACCESS_KEY_ID=test
+export AWS_SECRET_ACCESS_KEY=test
+export AWS_DEFAULT_REGION=ap-southeast-2
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -11,16 +15,20 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="fino-time"
 export PATH="$PATH:/home/daniel-user/.local/bin:/home/daniel-user/.local/share/soar/bin"
 export PATH="$PATH:/home/daniel-user/.local/share/soar/bin"
-alias firefox='nohup firefox >/dev/null 2>&1 &'
-alias idea='nohup idea >/dev/null 2>&1 &'
-alias obsidian='obsidian >/dev/null 2>&1 &'
-alias edit='vim ~/.zshrc'
+alias killdiscord='pkill -9 -f discord'
+alias edit='nvim ~/.zshrc'
 alias reload='source ~/.zshrc'
 alias volume='nohup pavucontrol >/dev/null 2>&1 &'
 export BROWSER=firefox
 alias dolphin='nohup dolphin >/dev/null 2>&1 &'
 alias podman='nohup podman >/dev/null 2>&1 &'
-alias timeshift='sudo -E timeshift-gtk'
+alias update='sudo pacman -Syu'
+alias search='fzf'
+alias windows='sudo systemctl reboot --boot-loader-entry=windows.conf'
+alias lzr='lazydocker'
+alias r='gtk-launch'
+alias sleep='systemctl suspend'
+alias postman='nohup postman >/dev/null 2>&1 & disown'
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -52,7 +60,7 @@ alias timeshift='sudo -E timeshift-gtk'
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -82,6 +90,7 @@ alias timeshift='sudo -E timeshift-gtk'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+unsetopt correct_all
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,3 +129,4 @@ source $ZSH/oh-my-zsh.sh
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
